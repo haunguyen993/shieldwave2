@@ -8,8 +8,27 @@
     ],
     "routes": [
         {
+            "src": "/public/(.*)",
+            "dest": "/frontend/public/$1"
+        },
+        {
+            "src": "/styles/(.*)",
+            "dest": "/frontend/src/styles/$1"
+        },
+        {
+            "src": "/js/(.*)",
+            "dest": "/frontend/src/js/$1"
+        },
+        {
+            "handle": "filesystem"
+        },
+        {
+            "src": "/(.*)\\.html",
+            "dest": "/frontend/src/pages/$1.html"
+        },
+        {
             "src": "/(.*)",
-            "dest": "/frontend/src/pages/$1"
+            "dest": "/frontend/src/pages/$1.html"
         }
     ]
 } 
