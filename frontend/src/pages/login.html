@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - ShieldWave Security Platform</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
         <div class="nav-container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="logoshieldwave.png" alt="ShieldWave Logo">
+                    <img src="../../public/images/logoshieldwave.png" alt="ShieldWave Logo">
                     <span>SHIELDWAVE</span>
                 </a>
             </div>
@@ -53,8 +53,7 @@
         <div class="login-container">
             <div class="login-card">
                 <h2>Log in</h2>
-                <div id="error-message" class="error-message" style="display: none;"></div>
-                <form class="login-form" id="login-form" onsubmit="handleLogin(event)">
+                <form class="login-form">
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" placeholder="Your@email.com" required>
@@ -82,11 +81,11 @@
                     
                     <div class="social-login">
                         <button type="button" class="google-login">
-                            <img src="images/google-icon.svg" alt="Google">
+                            <img src="../../public/images/google-icon.svg" alt="Google">
                             Log in with Google
                         </button>
                         <button type="button" class="microsoft-login">
-                            <img src="images/microsoft-icon.svg" alt="Microsoft">
+                            <img src="../../public/images/microsoft-icon.svg" alt="Microsoft">
                             Log in with Microsoft
                         </button>
                     </div>
@@ -98,6 +97,6 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html> 
