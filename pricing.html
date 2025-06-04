@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - ShieldWave Security Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logoshieldwave.png" alt="ShieldWave Logo">
+                    <span>SHIELDWAVE</span>
+                </a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-menu">
+                <li class="dropdown">
+                    <a href="#features" class="dropdown-toggle">Features <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="websitescanning.html">Website Scanning</a></li>
+                        <li><a href="portscanning.html">Port Scanning</a></li>
+                        <li><a href="networkscanning.html">Network Scanning</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#company" class="dropdown-toggle">Company <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="login-btn">Log in</a>
+                <a href="signup.html" class="cta-btn">Try it for free</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Pricing Hero Section -->
+    <section class="pricing-hero">
+        <div class="pricing-hero-container">
+            <h1>Scan, Exploit, Report, Repeat</h1>
+        </div>
+    </section>
+
+    <!-- Pricing Plans Section -->
+    <section class="pricing-plans">
+        <div class="pricing-grid">
+            <!-- Free Plan -->
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h2>FREE</h2>
+                    <div class="price">
+                        <span class="amount">0$</span>
+                    </div>
+                </div>
+                <ul class="pricing-features">
+                    <li>Up to 5 scanned Assets</li>
+                    <li>Up to 2 parallel scans</li>
+                </ul>
+                <a href="signup.html" class="pricing-btn">Sign up for Free</a>
+            </div>
+
+            <!-- Pro Plan -->
+            <div class="pricing-card featured">
+                <div class="pricing-header">
+                    <h2>PRO</h2>
+                    <div class="price">
+                        <span class="amount">200$</span>
+                        <span class="period">/month</span>
+                    </div>
+                </div>
+                <ul class="pricing-features">
+                    <li>Advanced features</li>
+                    <li>Deep scanning</li>
+                </ul>
+                <a href="checkout.html" class="pricing-btn">Sign up for Pro</a>
+            </div>
+        </div>
+
+        <!-- Feature Comparison Table -->
+        <div class="pricing-table-container">
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Function</th>
+                        <th>Free</th>
+                        <th>Basic</th>
+                        <th>Pro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Light scan to quickly detect exposure</td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>Deep scan to create an attack map</td>
+                        <td><span class="cross">✕</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>Quick scan to detect misconfigurations</td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>In-depth deep scan</td>
+                        <td><span class="cross">✕</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>Safe remote attack simulation</td>
+                        <td><span class="cross">✕</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>Automatic capture of cookies and source IP</td>
+                        <td><span class="cross">✕</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>Limit scan assets</td>
+                        <td>Up to 5</td>
+                        <td>Up to 5</td>
+                        <td>Up to 50</td>
+                    </tr>
+                    <tr>
+                        <td>Parallel scanning</td>
+                        <td>Up to 2</td>
+                        <td>Up to 2</td>
+                        <td>Up to 5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 

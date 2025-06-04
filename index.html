@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShieldWave - Security Testing Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logoshieldwave.png" alt="ShieldWave Logo">
+                <span>SHIELDWAVE</span>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-menu">
+                <li class="dropdown">
+                    <a href="#features" class="dropdown-toggle">Features <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="websitescanning.html">Website Scanning</a></li>
+                        <li><a href="portscanning.html">Port Scanning</a></li>
+                        <li><a href="networkscanning.html">Network Scanning</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#company" class="dropdown-toggle">Company <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="login-btn">Log in</a>
+                <a href="signup.html" class="cta-btn">Try it for free</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-card pentesting">
+                <h1>Pentesting your<br>web apps</h1>
+                <p>Web Apps is usually the most frequent<br>method for hackers to attack<br>as ShieldWave provides Pentesting Web App<br>solutions.</p>
+                <ul class="features-list">
+                    <li>Automatically map the attack surface</li>
+                    <li>Scan for the latest critical vulnerabilities</li>
+                    <li>Exploit to assess OS vulnerabilities</li>
+                    <li>All the pentest traces in ONE Panel</li>
+                </ul>
+                <a href="pentestservice.html" class="hero-btn">Request now for free</a>
+            </div>
+            
+            <div class="hero-card system-check">
+                <h1>Check your system<br>Quickly and reliable</h1>
+                <p>In order to save time and cost, ShieldWave<br>new provides reliable In-a-click, so you save<br>your time in reports and reliably way to run our<br>scans.</p>
+                <ul class="features-list">
+                    <li>Reliable Tools</li>
+                    <li>Scan for the latest critical vulnerabilities</li>
+                    <li>Accurately for vulnerabilities</li>
+                    <li>Safe for all system testing</li>
+                </ul>
+                <button class="hero-btn">Choose your scan</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- What you can do Section -->
+    <section class="features-section">
+        <h2 class="section-title">What you can do with ShieldWave</h2>
+        <p class="section-subtitle">Set up a team of penetration testing technicians, ShieldWave is a web based platform that<br>enabling the control of the security to allow every enterprise, government, and organization<br>to assess, scan and harden. ShieldWave is offering via on Premises, Cloud-based and Advanced<br>Self-hosted with exclusive feature significantly transform and save lot.</p>
+        
+        <div class="features-grid">
+            <!-- Attack Surface Mapping -->
+            <div class="feature-card attack-surface">
+                <div class="feature-content">
+                    <div class="chart-3d-container">
+                        <img src="An image illustrating Attack Surface Mapping capabilities.png" alt="Attack Surface Mapping" class="attack-surface-img">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Attack Surface Mapping</h3>
+                        <ul>
+                            <li>Discover the attack surface of your network targets, including subdomains, open ports and running services</li>
+                            <li>Map web application technologies, take screenshots, detect WAFs and discover hidden files by fuzzing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vulnerability Scanning -->
+            <div class="feature-card vulnerability">
+                <div class="feature-content">
+                    <div class="feature-text">
+                        <h3>Vulnerability Scanning</h3>
+                        
+                        <h4>Web Application Scanning</h4>
+                        <ul>
+                            <li>Use our powerful, custom Website Vulnerability Scanner to accurately detect common vulnerabilities (e.g. XSS, SQLi, OS Command injection) in classic and modern web applications (SPAs)</li>
+                            <li>Quickly identify specific security issues with dedicated scanners for API vulnerabilities and widely used CMSs (Wordpress, Drupal, Joomla, Sharepoint)</li>
+                        </ul>
+                        
+                        <h4>Network Scanning</h4>
+                        <ul>
+                            <li>Uncover a wide range of infrastructure security issues with our Network Vulnerability Scanner, a custom tool which finds unnecessary open ports, missing security patches, service misconfigurations, and critical CVEs (Log4shell, ProxyShell, etc.)</li>
+                            <li>Find weak credentials and prove the risk of unauthorized access with our Password Auditor tool</li>
+                        </ul>
+                        
+                        <button class="explore-btn">Explore vulnerability scanners</button>
+                    </div>
+                    <div class="vulnerability-visual">
+                        <img src="An image illustrating Vulnerability Scanning capabilities.png" alt="Vulnerability Scanning" class="vulnerability-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exploitation -->
+            <div class="feature-card exploitation">
+                <div class="feature-content">
+                    <div class="exploit-visual">
+                        <img src="exploitation-illustration.svg fill.png" alt="Exploitation" class="exploitation-img">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Exploitation</h3>
+                        <ul>
+                            <li>Exploit critical CVEs, gain initial access, extract sensitive files and more with Sploter - Auto Exploiter</li>
+                            <li>Show your customers the real impact of your findings by extracting powerful evidence and creating strong proof-of-concepts</li>
+                            <li>Also exploit web vulnerabilities like SQL injection, XSS and more, extracting data to demonstrate real security risks</li>
+                        </ul>
+                        <button class="discover-btn">Discover exploit tools</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Writing Pentest Reports -->
+            <div class="feature-card reports">
+                <div class="feature-content">
+                    <div class="feature-text">
+                        <h3>Writing Pentest Reports</h3>
+                        <ul>
+                            <li>Use the Pentest Report Generator to quickly create editable Word (.docx) reports from your findings - 50% faster than the manual way</li>
+                            <li>Simplify report writing with predefined Word templates and a rich library of common findings (with description, risk, and recommendations)</li>
+                            <li>Create your own custom, reusable findings and report templates</li>
+                        </ul>
+                        <button class="learn-btn">Learn about reporting</button>
+                    </div>
+                    <div class="reports-visual">
+                        <img src="writing-pentest-reports-illustration.svg fill.png" alt="Writing Pentest Reports" class="reports-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continuous Security Monitoring -->
+            <div class="feature-card monitoring">
+                <div class="feature-content">
+                    <div class="monitor-visual">
+                        <img src="continuous-security-monitoring-illustration.svg fill.png" alt="Continuous Security Monitoring" class="monitoring-img">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Continuous Security Monitoring</h3>
+                        <ul>
+                            <li>Schedule periodic vulnerability scans</li>
+                            <li>Automatically send reports to Email, Slack or Webhooks</li>
+                            <li>Get notified when high risk issues are found or when other custom conditions are met</li>
+                        </ul>
+                        <button class="discover-btn">Discover monitoring</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 

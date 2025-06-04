@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - ShieldWave Security Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logoshieldwave.png" alt="ShieldWave Logo">
+                    <span>SHIELDWAVE</span>
+                </a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-menu">
+                <li class="dropdown">
+                    <a href="#features" class="dropdown-toggle">Function <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="websitescanning.html">Website Scanning</a></li>
+                        <li><a href="portscanning.html">Port Scanning</a></li>
+                        <li><a href="networkscanning.html">Network Scanning</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#company" class="dropdown-toggle">Company <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="login-btn">Log in</a>
+                <a href="signup.html" class="cta-btn">Free sign up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Signup Section -->
+    <section class="signup-section">
+        <div class="signup-container">
+            <div class="signup-grid">
+                <!-- Left Column - Plan Details -->
+                <div class="plan-details">
+                    <h2>New account</h2>
+                    <div class="plan-card">
+                        <h3>Free</h3>
+                        <div class="plan-features">
+                            <p>Up to 5 assets</p>
+                            <p>Up to 2 parallel scans</p>
+                            <div class="price-tag">/month</div>
+                            <ul class="feature-list">
+                                <li>Save scan data for up to 30 days</li>
+                                <li>Some tools included</li>
+                                <li>Small business scope</li>
+                                <li>Simple reporting</li>
+                                <li>Two-Factor Authentication</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Signup Form -->
+                <div class="signup-form-container">
+                    <div id="error-message" class="error-message" style="display: none;"></div>
+                    <form class="email-signup-form active" id="signup-form" onsubmit="handleSignup(event)">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="password-input">
+                                <input type="password" id="password" name="password" placeholder="Create a password" required minlength="6">
+                                <button type="button" class="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <div class="password-input">
+                                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                                <button type="button" class="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name (Optional)</label>
+                            <input type="text" id="company" name="company" placeholder="Enter your company name">
+                        </div>
+                        <div class="terms-agreement">
+                            <label class="checkbox-container">
+                                <input type="checkbox" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="privacy-link">Privacy Policy</a>
+                            </label>
+                        </div>
+                        <button type="submit" class="signup-submit-btn">Create Account</button>
+
+                        <div class="shortcut">
+                            <span>or continue with</span>
+                        </div>
+
+                        <div class="social-login">
+                            <button type="button" class="google-login">
+                                <img src="images/google-icon.svg" alt="Google">
+                                Continue with Google
+                            </button>
+                            <button type="button" class="microsoft-login">
+                                <img src="images/microsoft-icon.svg" alt="Microsoft">
+                                Continue with Microsoft
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="signup-prompt">
+                        Already have an account? <a href="login.html" class="login-link">Sign in now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Port Scanner with Nmap - ShieldWave Security Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/port-scan-form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logoshieldwave.png" alt="ShieldWave Logo">
+                    <span>SHIELDWAVE</span>
+                </a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-menu">
+                <li class="dropdown">
+                    <a href="#features" class="dropdown-toggle">Function <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="websitescanning.html">Website Scanning</a></li>
+                        <li><a href="portscanning.html">Port Scanning</a></li>
+                        <li><a href="networkscanning.html">Network Scanning</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#company" class="dropdown-toggle">Company <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="login-btn">Log in</a>
+                <a href="signup.html" class="cta-btn">Free sign up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container network-scanner-hero">
+            <!-- Left Column -->
+            <div class="hero-content">
+                <div class="scanner-logo">
+                    <img src="images/portscanning/port-icon.png" alt="Port Scanner" class="app-icon">
+                </div>
+                <h1>Port Scanner<br>with Nmap</h1>
+                <p>Find open ports and running services (incl. versions), and do OS fingerprinting in a single TCP port check. Inspect Top 100 TCP and UDP ports for free or get a paid plan to automate and schedule extensive custom scans for even more ports.</p>
+                <p>Each Nmap port scan against a target IP address or hostname automatically maps the attack surface and gives accurate data for your reconnaissance work. <a href="signup.html" class="paid-account-link">Sign up for a paid account</a> to perform deep port scanning with additional options.</p>
+                <a href="signup.html" class="create-account-btn">Create free account</a>
+            </div>
+
+            <!-- Right Column - Scan Form -->
+            <div class="port-scan-form-container">
+                <div class="scan-tabs">
+                    <button class="scan-tab active">Light scan</button>
+                    <button class="scan-tab" onclick="showDeepScanModal()">Deep scan</button>
+                </div>
+                <form class="port-scan-form">
+                    <div class="form-group">
+                        <label for="target">Target</label>
+                        <input type="text" id="target" name="target" placeholder="IP or Hostname" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Scan options</label>
+                        <div class="toggle-switch">
+                            <label class="switch">
+                                <input type="checkbox" id="detectServices" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span>Detect service version</span>
+                        </div>
+                        <div class="toggle-switch">
+                            <label class="switch">
+                                <input type="checkbox" id="osDetection">
+                                <span class="slider"></span>
+                            </label>
+                            <span>Detect operating system</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Protocol</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="tcp" name="protocol" checked>
+                                <label for="tcp">TCP</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="udp" name="protocol">
+                                <label for="udp">UDP</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Port selection</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="commonPorts" name="portSelection" checked>
+                                <label for="commonPorts">Common ports</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="listPorts" name="portSelection">
+                                <label for="listPorts">List of ports</label>
+                            </div>
+                        </div>
+                        <select class="port-select">
+                            <option>Top 100 ports</option>
+                        </select>
+                    </div>
+
+                    <div class="terms-checkbox">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">
+                            I am authorized to scan this target and I agree with the Terms of Service.
+                        </label>
+                    </div>
+                    <a href="#" class="terms-link">Read the Terms of Service</a>
+
+                    <button type="submit" class="start-scan-btn">
+                        <i class="fas fa-play"></i>
+                        Start scan
+                    </button>
+                </form>
+                <div class="scan-info">
+                    <p>Map a company's network perimeter, check firewall rules, and determine which services are exposed to the internet.</p>
+                    <a href="#" class="see-more">SEE MORE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-header">
+                <div class="badge">
+                    Just made better with every scan
+                </div>
+                <h2>About this Port Scanner with Nmap</h2>
+            </div>
+            
+            <div class="about-content">
+                <p>Our <strong>open port checker</strong> provides an easy and fast way to run an online Nmap scan with zero setup and maintenance. Compared to using Nmap on your local machine, it's much more effective to check all open ports from our cloud platform because the Port Scanner on Pentest-Tools.com gives you the external perspective of your target that any attacker has.</p>
+                
+                <p>The basic version of the Port Scanner with Nmap lets you scan open ports with custom settings right away. Our pre-configured open port scanner comes with an easy-to-use interface over Nmap's complex command-line parameters. From your online account, you can:</p>
+                
+                <ul class="feature-list">
+                    <li>Indicate custom TCP and UDP ports to scan (1-65535)</li>
+                    <li>Enable and disable service detection, operating system detection, and host discovery</li>
+                    <li>Do Traceroute</li>
+                    <li>Do port scans directly against services inside networks with the VPN agent</li>
+                </ul>
+                
+                <p>For even more effective port scanning, our tool supports scheduled and parallel scans (with notifications), automated Nmap scans with scan templates and defined inputs, and automatic attack surface mapping.</p>
+                
+                <p>Each port check produces a professional report you can share with clients, managers, and other decision-makers. We also keep our port scan tool up to date through constant improvements in functionality, performance, and integration with the other Platform Tools and features.</p>
+            </div>
+
+            <div class="specifications-cta">
+                <img src="images/portscanning/specs-bg.jpg" alt="Technical Specifications" class="specs-image">
+            </div>
+
+            <div class="light-scan-info">
+                <p>The Light Scan only checks for the most common Top 100 TCP and UDP ports and service detection (soft) is enabled in this online port scan configuration. See free scan intervals not just available ports, but also their running services including HTTP, HTTP, FTP, SSH, SMB, RDP, SMTP, Telnet, NMS and POP3 – and their version. <a href="#" class="try-link">Try a free port scan now</a> to see a sample report.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Report Section -->
+    <section class="sample-report-section">
+        <div class="report-container">
+            <div class="report-content">
+                <!-- Left Column - Features -->
+                <div class="report-features-column">
+                    <div class="report-badge">REPORTING</div>
+                    <h2>Sample Port Scanner with Nmap report</h2>
+                    <p>Here is a sample report from our Port Scanner with Nmap that gives you a taste of how our tools save you time and reduce repetitive manual work.</p>
+                    
+                    <div class="feature-card">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="feature-text">
+                            <h3>Accurate port scanning results</h3>
+                            <p>Our port scan tool gives you a clear overview of all the open ports and running services on a target. You get a complete list of every service running on each port, making it easy to spot potential security issues.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="feature-text">
+                            <h3>Information at a glance</h3>
+                            <p>The report gives you a comprehensive overview of what this target runs, so reconnaissance after service detection can begin right away. We make it easy to find open ports with different port categories to help you get started.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="feature-text">
+                            <h3>Indispensable reports - without the noise</h3>
+                            <p>Get clear, detailed reports focused on the things that matter. We filter out the noise for your work in a specific open ports pen-testing download that gives you access to port scan history you can export as needed.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="feature-text">
+                            <h3>Automated report delivery for scheduled findings</h3>
+                            <p>Help your team surface issues fast with scheduled scans you can personalize. Get new reports delivered straight to your inbox anytime there's a significant change, and manage your findings with relevant context.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Report Image -->
+                <div class="report-image">
+                    <img src="images/portscanning/Port Scanner Online with Nmap Report Sample.png" alt="Sample Port Scanner Report">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep Scan Modal -->
+    <div id="deepScanModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Enable Deep Scans and unlock more tools & features</h3>
+                <button class="close-btn" onclick="closeDeepScanModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">Perform deep port scanning with additional options.</p>
+                
+                <div class="comparison-table">
+                    <div class="table-header">
+                        <div class="col-feature">Scanner capabilities</div>
+                        <div class="col-light">Light scan</div>
+                        <div class="col-deep">Deep scan</div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="col-feature">Top 100 ports</div>
+                        <div class="col-light"><i class="fas fa-check"></i></div>
+                        <div class="col-deep"><i class="fas fa-check"></i></div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="col-feature">Single IP or hostname</div>
+                        <div class="col-light"><i class="fas fa-check"></i></div>
+                        <div class="col-deep"><i class="fas fa-check"></i></div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="col-feature">Detect service version</div>
+                        <div class="col-light"><i class="fas fa-check"></i></div>
+                        <div class="col-deep"><i class="fas fa-check"></i></div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="col-feature">Detect operating system</div>
+                        <div class="col-light"><i class="fas fa-check"></i></div>
+                        <div class="col-deep"><i class="fas fa-check"></i></div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="col-feature">All 65535 ports</div>
+                        <div class="col-light"><i class="fas fa-xmark"></i></div>
+                        <div class="col-deep"><i class="fas fa-check"></i></div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="col-feature">Traceroute</div>
+                        <div class="col-light"><i class="fas fa-xmark"></i></div>
+                        <div class="col-deep"><i class="fas fa-check"></i></div>
+                    </div>
+                </div>
+
+                <div class="additional-features">
+                    <h4>You also get:</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Full access to all the 20+ tools on the platform</li>
+                        <li><i class="fas fa-check-circle"></i> Dedicated scanners for major new vulnerabilities</li>
+                        <li><i class="fas fa-check-circle"></i> Authenticated scans, reporting & a lot more!</li>
+                    </ul>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="compare-btn" onclick="window.location.href='pricing.html'">Compare plans</button>
+                    <button class="create-account-btn" onclick="window.location.href='signup.html'">Create free account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+    function showDeepScanModal() {
+        document.getElementById('deepScanModal').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeDeepScanModal() {
+        document.getElementById('deepScanModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        const modal = document.getElementById('deepScanModal');
+        if (event.target == modal) {
+            closeDeepScanModal();
+        }
+    }
+    </script>
+</body>
+</html> 

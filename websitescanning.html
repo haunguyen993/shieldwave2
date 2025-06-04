@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Vulnerability Scanner - ShieldWave Security Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/web-scan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logoshieldwave.png" alt="ShieldWave Logo">
+                    <span>SHIELDWAVE</span>
+                </a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-menu">
+                <li class="dropdown">
+                    <a href="#features" class="dropdown-toggle">Function <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="websitescanning.html">Website Scanning</a></li>
+                        <li><a href="portscanning.html">Port Scanning</a></li>
+                        <li><a href="networkscanning.html">Network Scanning</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#company" class="dropdown-toggle">Company <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="login-btn">Log in</a>
+                <a href="signup.html" class="cta-btn">Free sign up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container web-scanner-hero">
+            <!-- Left Column -->
+            <div class="hero-content">
+                <div class="scanner-logo">
+                    <img src="images/webscanning/web-icon.png" alt="Website Scanner" class="app-icon">
+                </div>
+                <h1>Website<br>Vulnerability<br>Scanner</h1>
+                <p>Our innovative website vulnerability scanner helps identify over 4,500<br>CVEs in extensively used web technologies and cloud-based platforms.<br>We thoroughly scan your site's perimeter to uncover its vulnerabilities.</p>
+                <p class="secondary-text">Engineered to handle modern web apps and cloud services, it efficiently<br>detects SQL injection, XSS, CSRF, file inclusion, and other critical<br>vulnerabilities with negligible chances of false positives.</p>
+                <a href="signup.html" class="create-account-btn">Create free account</a>
+            </div>
+
+            <!-- Right Column - Scan Form -->
+            <div class="scan-form-container">
+                <div class="scan-form">
+                    <div class="scan-tabs">
+                        <button class="scan-tab active">Light scan</button>
+                        <button class="scan-tab" onclick="showDeepScanModal()">Deep scan</button>
+                    </div>
+                    <form class="web-scan-form">
+                        <div class="form-group">
+                            <label for="target">Target URL</label>
+                            <input type="url" id="target" name="target" placeholder="https://example.com" required>
+                        </div>
+
+                        <button type="submit" class="start-scan-btn">
+                            <i class="fas fa-play"></i>
+                            Start scan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2 class="section-title">Find exploitable web app vulnerabilities with documented evidence</h2>
+        <p class="section-subtitle">Our innovative website vulnerability scanner helps identify over 4,500 CVEs in extensively used web technologies and cloud-based platforms. We thoroughly scan your site's perimeter to uncover its vulnerabilities.</p>
+        
+        <div class="features-grid">
+            <!-- Get more from every scan -->
+            <div class="feature-card coverage-card">
+                <div class="feature-content">
+                    <div class="feature-image">
+                        <img src="images/webscanning/Get more from every scan. Test web apps like a real attacker illustration.png" alt="Dragon Icon" class="coverage-icon">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Get more from every scan. Test web apps like a real attacker</h3>
+                        <p>Simulate authenticated and unauthenticated attacks to uncover deeper security flaws, such as SSRF with access to an internal service, OS command injection, exposed credentials, and misconfigurations in SPAs, APIs, and traditional web apps.</p>
+                        <p>The Website Vulnerability Scanner on Pentest-Tools.com mimics real attackers' tactics and focuses on realistic, exploitable issues rather than ticking boxes.</p>
+                        <p>We keep it sharp by battle-testing it every day in web app pentests that our offensive security services team performs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust your results -->
+            <div class="feature-card coverage-card">
+                <div class="feature-content content-reverse">
+                    <div class="feature-text">
+                        <h3>Trust your results. Minimize FPs with proof-based validation</h3>
+                        <p>Our Website Vulnerability Scanner doesn't just find web app security issues - it gives you the evidence you need to validate and report real security risks.</p>
+                        <p>As it crawls and tests your web app, it captures payload execution results and collects evidence such as HTTP request/response with highlighted proof, screenshots, and extracted sensitive data. The scanner also uses out-of-band detection to find invisible vulnerabilities which don't show up directly in the HTTP responses.</p>
+                        <p>When it's confident the vulnerabilities it found actually exist, the scanner's automatic validation feature applies a "Confirmed" label. Where available, it also gives you an instant replay attack option.</p>
+                        <p>Need more? Get additional proof for PoCs with one-click tests with our offensive security tools for web apps - the SQLi Exploiter and XSS Exploiter.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="images/webscanning/gradient-checkmark.svg fill.png" alt="Target Icon" class="coverage-icon">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Get deeper findings -->
+            <div class="feature-card coverage-card">
+                <div class="feature-content">
+                    <div class="feature-image">
+                        <img src="images/webscanning/gradient-target.svg fill.png" alt="Target Scan" class="coverage-icon">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Get deeper findings, faster. Even from JavaScript-heavy websites</h3>
+                        <p>Our Website Vulnerability Scanner uses a powerful browser-based crawler to scan Single Page Applications (SPAs) and other JavaScript-heavy websites - fast and accurately.</p>
+                        <p>Because it uses parallelization to detect cloud-hosted URLs, it speeds up discovery and attack surface mapping, giving you findings faster.</p>
+                        <p>Scan results include deeper insights too, such as API endpoints detected during crawling, automated OpenAPI fuzzing, and improved detection for publicly accessible files and pages that should've been hidden.</p>
+                        <p>This approach ensures comprehensive attack surface coverage and higher vulnerability detection rates.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customize any scan -->
+            <div class="feature-card coverage-card">
+                <div class="feature-content">
+                    <div class="feature-image">
+                        <img src="images/webscanning/gradient-key.svg.png" alt="Key Icon" class="coverage-icon">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Customize any scan. Advanced features for in-depth detection</h3>
+                        <p>The Website Vulnerability Scanner adapts to the complexity of the web apps you're testing, offering flexible scan configurations to get precise results.</p>
+                        <p>Adjust the spidering approach and depth and the number of requests per second to match your target's environment. You can even set custom scan times to make every second count.</p>
+                        <p>The scanner also navigates complex authentication flows and uses session recording, form-based authentication, headers, and cookies to test behind login pages and detect vulnerabilities to which only authenticated users get exposed.</p>
+                        <p>Think CSRF, broken access controls, session misconfigurations, and 75+ more web app vulnerabilities.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enjoy benchmark-proven performance -->
+            <div class="feature-card coverage-card">
+                <div class="feature-content content-reverse">
+                    <div class="feature-text">
+                        <h3>Enjoy benchmark-proven performance. See for yourself</h3>
+                        <p>The Website Vulnerability Scanner from Pentest-Tools.com delivers industry-leading detection accuracy, matching top commercial tools while keeping a notably lower false-positive rate.</p>
+                        <p>Tested against 5 leading commercial and open-source scanners, it identified 98% of known vulnerabilities in realistic test environments, outperforming several competitors.</p>
+                        <p>With standardized, transparent test criteria reflecting what pentesters and AppSec engineers need in a DAST tool, this benchmark confirms its superior accuracy, reliability, and depth.</p>
+                        <p>With its ability to reduce false positives more effectively than tools like Qualys and Rapid7 InsightAppSec, our scanner helps security teams from 95+ countries find and validate real risks.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="images/webscanning/gradient-radar.svg fill.png" alt="Wave Icon" class="coverage-icon">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Generate proof-backed reports -->
+            <div class="feature-card coverage-card">
+                <div class="feature-content">
+                    <div class="feature-image">
+                        <img src="images/webscanning/gradient-document.svg fill.png" alt="Lock Icon" class="coverage-icon">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Generate proof-backed reports. Make sure remediation happens</h3>
+                        <p>Our built-in advanced reporting tool transforms raw findings into structured, actionable reports on which developers, IT teams, and management can act immediately.</p>
+                        <p>Findings come with risk levels, risk description, and step-by-step remediation guidance to drive real fixes. Every report includes proof, such as screenshots, payload execution results, and highlighted HTTP request/response data to back up findings. Vulnerabilities are mapped to CWE and OWASP Top 10 (both 2017 and 2021) to help security teams prioritize risks effectively.</p>
+                        <p>With customizable report formats, you can present Website Vulnerability Scanner findings to technical teams, executives, or auditors, making security issues impossible to ignore.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep Scan Modal -->
+    <div id="deepScanModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Enable Deep Scans and unlock more tools & features</h3>
+                <button class="close-btn" onclick="closeDeepScanModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">Deep scans run 40+ proprietary tests to discover and confirm 75+ web application issues. Includes out-of-band detection to find deeply hidden vulnerabilities and minimize false positives.</p>
+                
+                <div class="comparison-table">
+                    <div class="table-header">
+                        <div class="col-feature">Testing areas</div>
+                        <div class="col-light">Light scan</div>
+                        <div class="col-deep">Deep scan</div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="col-feature">Version-based vulnerability detection</div>
+                        <div class="col-light"><i class="fas fa-check"></i></div>
+                        <div class="col-deep"><i class="fas fa-check"></i></div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="col-feature">Common configuration issues</div>
+                        <div class="col-light"><i class="fas fa-check"></i></div>
+                        <div class="col-deep"><i class="fas fa-check"></i></div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="col-feature">XSS testing using real browsers</div>
+                        <div class="col-light"><i class="fas fa-xmark"></i></div>
+                        <div class="col-deep"><i class="fas fa-check"></i></div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="col-feature">SQL Injection</div>
+                        <div class="col-light"><i class="fas fa-xmark"></i></div>
+                        <div class="col-deep"><i class="fas fa-check"></i></div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="col-feature">Server-Side Request Forgery (SSRF)</div>
+                        <div class="col-light"><i class="fas fa-xmark"></i></div>
+                        <div class="col-deep"><i class="fas fa-check"></i></div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="col-feature">Server-Side Template Injection</div>
+                        <div class="col-light"><i class="fas fa-xmark"></i></div>
+                        <div class="col-deep"><i class="fas fa-check"></i></div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="col-feature">Client-Side Prototype Pollution</div>
+                        <div class="col-light"><i class="fas fa-xmark"></i></div>
+                        <div class="col-deep"><i class="fas fa-check"></i></div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="col-feature">Python, Javascript, PHP Code Injection</div>
+                        <div class="col-light"><i class="fas fa-xmark"></i></div>
+                        <div class="col-deep"><i class="fas fa-check"></i></div>
+                    </div>
+                </div>
+
+                <div class="additional-features">
+                    <h4>You also get:</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Full access to all the 20+ tools on the platform</li>
+                        <li><i class="fas fa-check-circle"></i> Dedicated scanners for critical new vulnerabilities</li>
+                        <li><i class="fas fa-check-circle"></i> Authenticated scans, reporting & a lot more!</li>
+                    </ul>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="compare-btn" onclick="window.location.href='pricing.html'">Compare plans</button>
+                    <button class="create-account-btn" onclick="window.location.href='signup.html'">Create free account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+    function showDeepScanModal() {
+        document.getElementById('deepScanModal').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeDeepScanModal() {
+        document.getElementById('deepScanModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        const modal = document.getElementById('deepScanModal');
+        if (event.target == modal) {
+            closeDeepScanModal();
+        }
+    }
+    </script>
+</body>
+</html> 

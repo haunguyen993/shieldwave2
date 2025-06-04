@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Scanning - ShieldWave Security Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logoshieldwave.png" alt="ShieldWave Logo">
+                    <span>SHIELDWAVE</span>
+                </a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-menu">
+                <li class="dropdown">
+                    <a href="#features" class="dropdown-toggle">Function <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="websitescanning.html">Website Scanning</a></li>
+                        <li><a href="portscanning.html">Port Scanning</a></li>
+                        <li><a href="networkscanning.html">Network Scanning</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#company" class="dropdown-toggle">Company <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </li>
+                <li><a href="service.html">Service</a></li> 
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="login-btn">Log in</a>
+                <a href="signup.html" class="cta-btn">Free sign up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container network-scanner-hero">
+            <!-- Left Column -->
+            <div class="hero-content">
+                <div class="scanner-logo">
+                    <img src="images/networkscanning/network-icon.png" alt="Network Scanner" class="app-icon">
+                </div>
+                <h1>Network<br>Vulnerability<br>Scanner</h1>
+                <p>The Network Vulnerability Scanner is a highly accurate tool that<br>detects 14,902 CVEs in extensively used software products and<br>technologies.</p>
+                <p class="secondary-text">With daily vulnerability updates and a very low rate of false positives,<br>the scanner provides reliable results for your next move.</p>
+                <a href="signup.html" class="create-account-btn">Create free account</a>
+            </div>
+
+            <!-- Right Column - Scan Form -->
+            <div class="scan-form-container">
+                <div class="scan-form">
+                    <div class="scan-tabs">
+                        <button class="scan-tab active">Light scan</button>
+                        <button class="scan-tab" onclick="showDeepScanModal()">Deep scan</button>
+                    </div>
+                    <form class="network-scan-form">
+                        <div class="form-group">
+                            <label for="target">Target</label>
+                            <input type="text" id="target" name="target" placeholder="Hostname" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Port selection</label>
+                            <div class="port-selection">
+                                <div class="port-option">
+                                    <input type="radio" id="commonPorts" name="portSelection" value="common" checked>
+                                    <label for="commonPorts">
+                                        <span class="radio-custom"></span>
+                                        <span class="label-text">Common ports</span>
+                                        <span class="port-info">Scans most commonly used ports</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <select id="portRange" class="port-select">
+                                <option value="top100">Top 100 ports</option>
+                                <option value="top500">Top 500 ports</option>
+                                <option value="top1000">Top 1000 ports</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group terms">
+                            <label class="checkbox-container">
+                                <input type="checkbox" required>
+                                <span class="checkmark"></span>
+                                I am authorized to scan this target and I agree with the Terms of Service.
+                            </label>
+                            <a href="#" class="terms-link">Read the Terms of Service</a>
+                        </div>
+
+                        <button type="submit" class="start-scan-btn">
+                            <i class="fas fa-play"></i>
+                            Start scan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2 class="section-title">A supercharged Network Scanner for your Infrastructure</h2>
+        <p class="section-subtitle">The Network Vulnerability Scanner is a highly automated tool that identifies security risks in your network infrastructure and helps you fix them. It's built to handle complex networks with thousands of assets, while being easy to use and delivering accurate results.</p>
+        
+        <div class="features-grid">
+            <!-- Comprehensive Coverage -->
+            <div class="feature-card coverage-card">
+                <div class="feature-content">
+                    <div class="feature-image">
+                        <img src="images/networkscanning/Comprehensive technology coverage illustration.png" alt="Comprehensive Coverage" class="coverage-icon">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Comprehensive technology coverage</h3>
+                        <p>The Network Vulnerability Scanner can detect over 150+ different TCP/UDP services, including web servers, mail servers, databases, and more. It also includes specialized modules for detecting vulnerabilities in network devices, IoT devices, and industrial control systems.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Self-updating detectors -->
+            <div class="feature-card coverage-card">
+                <div class="feature-content content-reverse">
+                    <div class="feature-text">
+                        <h3>Self-updating detectors</h3>
+                        <p>Stay up to date with the latest vulnerabilities. Our detectors are continuously updated to detect new vulnerabilities as they are discovered. The Network Vulnerability Scanner is updated daily to ensure you're protected against the latest threats.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="images/networkscanning/self-updatingdetection.svg fill.png" alt="Self-updating" class="coverage-icon">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Findings confirmed -->
+            <div class="feature-card coverage-card">
+                <div class="feature-content">
+                    <div class="feature-image">
+                        <img src="images/networkscanning/automatically-validatedfindings.svg fill.png" alt="Findings Confirmed" class="coverage-icon">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Findings confirmed by solid evidence</h3>
+                        <p>The Network Vulnerability Scanner uses safe exploits to confirm findings, reducing false positives. This means you can be confident that the vulnerabilities reported are real and need to be addressed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Automatically validated -->
+            <div class="feature-card coverage-card">
+                <div class="feature-content content-reverse">
+                    <div class="feature-text">
+                        <h3>Automatically validated findings</h3>
+                        <p>The Network Vulnerability Scanner automatically validates findings to ensure accuracy. This includes checking for false positives and verifying that vulnerabilities are exploitable in your environment.</p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="images/networkscanning/Automatically.png" alt="Validated Findings" class="coverage-icon">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Developed by security pros -->
+            <div class="feature-card coverage-card">
+                <div class="feature-content">
+                    <div class="feature-image">
+                        <img src="images/networkscanning/developed-byoffensive.svg fill.png" alt="Security Pros" class="coverage-icon">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Developed by offensive security pros</h3>
+                        <p>Built by the experts who know how attackers think. Our security professionals have years of experience in penetration testing and vulnerability assessment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section class="capabilities-section">
+        <div class="capabilities-container">
+            <div class="capabilities-header">
+                <h2>It's really easy to<br>scan your network<br>for vulnerabilities</h2>
+            </div>
+            
+            <div class="capabilities-content">
+                <div class="integration-image">
+                    <img src="images/networkscanning/network-scanner-technologies.svg fill.png" alt="Integration Diagram">
+                </div>
+                
+                <div class="capabilities-cards">
+                    <!-- No setup card -->
+                    <div class="capability-card">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <img src="images/networkscanning/Background.png" alt="Speed Icon">
+                            </div>
+                            <div class="card-text">
+                                <h3>No setup required. No processing power limits</h3>
+                                <p>Operating as a cloud-based scanner, the Network Vulnerability Scanner works out of the box. No need to install anything on your end to scan public-facing or internal network hosts.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scheduling card -->
+                    <div class="capability-card">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <img src="images/networkscanning/scheduling.png" alt="Schedule Icon">
+                            </div>
+                            <div class="card-text">
+                                <h3>Scheduling & running parallel scans</h3>
+                                <p>Automatically execute recurring and routine scans for your network hosts. Combine scheduling with the option to run multiple scans in parallel for a productivity boost, and get notifications for specific findings.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- API card -->
+                    <div class="capability-card">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <img src="images/networkscanning/api.png" alt="API Icon">
+                            </div>
+                            <div class="card-text">
+                                <h3>API access for easy integration</h3>
+                                <p>Initiate scans programmatically with our REST API. Integrate findings into your internal processes - CI/CD workflows, data sources, or custom applications - for an efficient and automated way to use our Network Scanner.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Internal scanning card -->
+                    <div class="capability-card">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <img src="images/networkscanning/internal.png" alt="Network Icon">
+                            </div>
+                            <div class="card-text">
+                                <h3>Internal scanning</h3>
+                                <p>Detect vulnerabilities, misconfigurations, and other security issues in hosts from internal networks, intranets, private clouds, or restricted-access systems. Quick and easy to set up, our VPN agent directs traffic from our servers to your target's internal network.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Integrations card -->
+                    <div class="capability-card">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <img src="images/networkscanning/intergrations.png" alt="Integration Icon">
+                            </div>
+                            <div class="card-text">
+                                <h3>Integrations</h3>
+                                <p>The Network Vulnerability Scanner integrates seamlessly with your preferred office and productivity tools: Jira, Slack, email, and Webhooks. Simplify your and your team's workflow with notifications for scan results for findings truly worth your time.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep Scan Modal -->
+    <div id="deepScanModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Enable Deep Scans and unlock more tools & features</h3>
+                <button class="close-btn" onclick="closeDeepScanModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">Perform in-depth network scanning and discover high risk vulnerabilities.</p>
+                
+                <div class="comparison-table">
+                    <div class="table-header">
+                        <div class="col-feature">Scanner capabilities</div>
+                        <div class="col-light">Light scan</div>
+                        <div class="col-deep">Deep scan</div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="col-feature">Open ports detection</div>
+                        <div class="col-light"><i class="fas fa-check"></i></div>
+                        <div class="col-deep"><i class="fas fa-check"></i></div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="col-feature">Version based vulnerability detection</div>
+                        <div class="col-light"><i class="fas fa-check"></i></div>
+                        <div class="col-deep"><i class="fas fa-check"></i></div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="col-feature">Active vulnerability detection (10,000+ plugins)</div>
+                        <div class="col-light"><i class="fas fa-xmark"></i></div>
+                        <div class="col-deep"><i class="fas fa-check"></i></div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="col-feature">Find service misconfigurations</div>
+                        <div class="col-light"><i class="fas fa-xmark"></i></div>
+                        <div class="col-deep"><i class="fas fa-check"></i></div>
+                    </div>
+                </div>
+
+                <div class="additional-features">
+                    <h4>You also get:</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Full access to all the 20+ tools on the platform</li>
+                        <li><i class="fas fa-check-circle"></i> Dedicated scanners for major new vulnerabilities</li>
+                        <li><i class="fas fa-check-circle"></i> Authenticated scans, reporting & a lot more!</li>
+                    </ul>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="compare-btn" onclick="window.location.href='pricing.html'">Compare plans</button>
+                    <button class="create-account-btn" onclick="window.location.href='signup.html'">Create free account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+    function showDeepScanModal() {
+        document.getElementById('deepScanModal').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeDeepScanModal() {
+        document.getElementById('deepScanModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        const modal = document.getElementById('deepScanModal');
+        if (event.target == modal) {
+            closeDeepScanModal();
+        }
+    }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ShieldWave Security Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+            <a href="index.html">
+                <img src="logoshieldwave.png" alt="ShieldWave Logo">
+                <span>SHIELDWAVE</span>
+            </a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-menu">
+                <li class="dropdown">
+                    <a href="#features" class="dropdown-toggle">Features <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="websitescanning.html">Website Scanning</a></li>
+                        <li><a href="portscanning.html">Port Scanning</a></li>
+                        <li><a href="networkscanning.html">Network Scanning</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#company" class="dropdown-toggle">Company <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="login-btn">Log in</a>
+                <a href="signup.html" class="cta-btn">Try it for free</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="contact-hero-container">
+            <div class="contact-hero-content">
+                <h1>We'd love to hear from you</h1>
+                <p>Whether you're curious about our security tools and features, have technical support issues, or any feedback for us - we're here to help you get an answer! We are here for you!</p>
+                <button class="hero-btn">Drop us a line</button>
+            </div>
+            <div class="contact-hero-image">
+                <img src="contact-illustration.svg fill.png" alt="Contact Illustration" class="floating-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="contact-grid">
+            <div class="contact-form">
+                <h2 class="section-title">Contact Us</h2>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="How can we help?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">I accept Customer Service Communication from Pentest-Tools.com</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit your message →</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <p class="info-text">Get in touch and send us your requests, feedback, suggestions, complaints, or anything else you want to share with us. Leave your email address and expect a reply from us soon!</p>
+                <p class="info-text">Our Support team is available Monday through Friday between 10:00 AM and 6:00 PM GMT+2.</p>
+                <div class="info-details">
+                    <div class="info-item">
+                        <i class="icon-location"></i>
+                        <p>48 Bvd. Iancu de Hunedoara<br>Bucharest, Romania, European Union</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="icon-vat"></i>
+                        <p>VAT Number<br>RO25394251</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="icon-time"></i>
+                        <p>Monday to Friday<br>10:00 am - 6:00 pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support-section">
+        <div class="support-container">
+            <div class="support-content">
+                <h2>Support</h2>
+                <p>Whether you're curious about our security tools and features, have technical support issues, or any feedback for us - we're here to help you get an answer!</p>
+                <a href="#contact-form" class="cta-btn">Get in touch</a>
+            </div>
+            <div class="support-image">
+                <img src="support-header-illustration.svg fill.png" alt="Support Illustration" class="floating-image">
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 

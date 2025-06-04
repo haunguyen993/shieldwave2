@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - SHIELDWAVE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logoshieldwave.png" alt="SHIELDWAVE Logo">
+                    <span>SHIELDWAVE</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        Function
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        Company
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                </li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="login-btn">Log in</a>
+                <a href="signup.html" class="cta-btn">Free sign up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="checkout-container">
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="selected-plan">
+                    <div class="plan-header">
+                        <h3>Enterprise Plan</h3>
+                        <span class="plan-price">$499<span class="period">/month</span></span>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <p>Unlimited scans</p>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <p>Advanced vulnerability detection</p>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <p>24/7 support</p>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <p>Custom reporting</p>
+                        </div>
+                    </div>
+                    <div class="billing-cycle">
+                        <label class="switch">
+                            <input type="checkbox" id="billingToggle">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="billing-text">Annual billing (save 20%)</span>
+                    </div>
+                </div>
+                <div class="price-breakdown">
+                    <div class="price-row">
+                        <span>Subtotal</span>
+                        <span>$499.00</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Tax (10%)</span>
+                        <span>$49.90</span>
+                    </div>
+                    <div class="price-row total">
+                        <span>Total</span>
+                        <span>$548.90</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Form -->
+            <div class="payment-form">
+                <h2>Payment Details</h2>
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label for="cardName">Name on card</label>
+                        <input type="text" id="cardName" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="cardNumber">Card number</label>
+                        <div class="card-input-wrapper">
+                            <input type="text" id="cardNumber" required placeholder="1234 5678 9012 3456">
+                            <div class="card-icons">
+                                <img src="images/visa.png" alt="Visa">
+                                <img src="images/mastercard.png" alt="Mastercard">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry">Expiry date</label>
+                            <input type="text" id="expiry" required placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" required placeholder="123">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" required>
+                            <option value="">Select country</option>
+                            <option value="US">United States</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="CA">Canada</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="saveCard">
+                            <label for="saveCard">Save card for future payments</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="checkout-btn">
+                        Pay $548.90
+                    </button>
+                    <p class="secure-text">
+                        <img src="images/lock.png" alt="Secure">
+                        Your payment is secure and encrypted
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html> 
